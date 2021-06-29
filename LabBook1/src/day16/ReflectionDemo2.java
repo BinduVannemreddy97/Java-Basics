@@ -7,11 +7,13 @@ public class ReflectionDemo2 {
 	System.out.println(p);
 	
 	//Dynamic old one
-	p=(Politian)Class.forName("day16.abcPolitian").getConstructor(new Class[]{String.class,String.class}).newInstance("Nani","Father of Nani");
+	p=(Politian)Class.forName("day16.abcPolitian").getConstructor
+			(new Class[]{String.class,String.class}).newInstance("Nani","Father of Nani");
 	System.out.println("Dynamic Nani:"+p);
 	
 	//dynamic way .... new one (they have achieved this through VARARGS
-	p=(Politian)Class.forName("day16.abcPolitian").getConstructor(String.class,String.class).newInstance("Nani","Father of Nani");
+	p=(Politian)Class.forName("day16.abcPolitian").
+			getConstructor(String.class,String.class).newInstance("Nani","Father of Nani");
 	System.out.println("Dynamic Nani:"+p);
 	
 	}
